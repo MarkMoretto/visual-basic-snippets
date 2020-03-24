@@ -32,6 +32,8 @@ Public Function PrintEmail()
             ' Print name of sender, sent date, and subject to console.
             Debug.Print itm.SenderName & ", " & itm.ReceivedTime & ", " & itm.Subject
         Next
+    Else
+        Call MsgBox("No items found!", vbOKOnly, "Outlook Mail Check")
     End If
     
     ' olApp.Quit ' Note: This will close Outlook if it's open.
