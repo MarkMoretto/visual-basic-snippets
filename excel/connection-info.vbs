@@ -2,8 +2,8 @@
 
 '' Set Excel file and output file names.
 Dim xl_name, out_name
-xl_name = "Productivity-Report.xlsx"
-out_name = "workbook-queries.sql"
+xl_name = "<name-of-workbook>.xlsx" ''' Name of Excel workbook.
+out_name = "workbook-queries.sql" ''' Name of output file.
 
 
 Public cwd, DebugConfig
