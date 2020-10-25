@@ -4,10 +4,10 @@
 
 
 ' @summary Return timestamp for current time, formatted to millisecond
-' @params Null
+' @params {String} dt_format - Option datetime format string.  Default is `yyyy-MM-dd hh:mm:ss.ns`
 ' @returns {String} Formatted timestamp
-Public Function GetTimestamp() As String
-On Error Goto 0
-' Note: This function shouldn't really return an error, but it's better to be safe!
-    GetTimestamp = Format(Now, "yyyy-MM-dd hh:mm:ss.ns")
+Public Function GetTimestamp(Optional dt_format As String = "yyyy-MM-dd hh:mm:ss.ns") As String
+On Error GoTo 0
+' Note: This function shouldn't really return an error.
+    GetTimestamp = Format(Now, dt_format)
 End Function
