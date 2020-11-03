@@ -22,29 +22,34 @@ Public Sub test_Incr()
 Dim i As Long: i = 1
 
 ''' Default is increment by 1
-Call Utils.Incr(i)
-
+Debug.Print "Increment 1 by 1:"
+Incr i
 Debug.Print i
 
+
 ''' Increment by 2. i should now equal 4.
-Call Utils.Incr(i, 2)
+Debug.Print Chr(13) & "Increment 2 by 2:"
+Incr i, 2
 Debug.Print i
 
 
 ''' Reset i to zero and increment by 2.
+Debug.Print Chr(13) & "Reset variable to 0 and increment by 2:"
 i = 0
-Call Utils.Incr(i, 2)
+Incr i, 2
 Debug.Print i
 
 
 ''' Reset i and run a loop
+Debug.Print Chr(13) & "Reset variable to zero and loop variable by 2 while a second variable increments to 10:"
 i = 0
 Dim j As Long: j = 0
 While j < 10
-    Call Utils.Incr(i, 2)
-    Call Utils.Incr(j)
+    Incr i, 2
+    Incr j
+    Debug.Print "Loop value: " & i
 Wend
 
-Debug.Print i
+Debug.Print "Final loop value: " & i
 
 End Sub
